@@ -28,13 +28,7 @@
 
     function initUnity(unityPlayer, globalOptions) {
         var options = $.extend(globalOptions, unityPlayer.data("options"));
-
-        var unityConfig = {
-            width: options.width,
-            height: options.height,
-            params: { enableDebugging:"0" }
-        };
-        var u = new UnityObject2(unityConfig);
+        var u = new UnityObject2(options);
 
         unityPlayer.empty();
         if (options.addMissingHtml) {
@@ -79,11 +73,16 @@
 
     $.fn.makeUnity3D = function(options) {
         var defaults = {
+            // Plugin settings
             url: "",
             event: null,
+            addMissingHtml: true,
+
+            // Unity setting
             width: 800,
             height: 450,
-            addMissingHtml: true
+            disableContextMenu: true,
+            params: { enableDebugging:"0" }
         };
         options = $.extend(defaults, options);
 
