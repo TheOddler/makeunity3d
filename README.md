@@ -11,6 +11,14 @@ A jquery plugin to easily embed Unity games into your website.
 
 That's it.
 
+### Iframe
+
+Alternatively you can embed the webplayer in an iframe. Simply use `//theoddler.github.io/makeunity3d/embed.html` as a source, adding options as needed:
+
+`<iframe src="//theoddler.github.io/makeunity3d/embed.html?url=url to your .unity3d file&event=click width="600" height="350"></iframe>`
+
+All options can be added to `src`.
+
 ## Options
 
 Options can be added on two levels.
@@ -23,7 +31,11 @@ Options set as parameter in makeUnity3D will override the default for all divs i
 The options that can be specified (name [default]: description)
 
 * url [""]: The URL of the .unity3d objects. Required.
-* event [null]: When the game should be loaded. Eg. 'mouseover'. If 'null' the game will be loaded when the page is loaded.
-* width [800]: Player width.
-* height [450]: Player height.
+* event [null]: When the game should be loaded. Eg. 'mouseover'. If null the game will be loaded when the page is loaded.
 * addMissingHtml [true]: Whether the some html should be placed in case unity is missing.
+
+You can also add any options defined by Unity, most importantly:
+
+* width [800]
+* height [450]
+* disableContextMenu [true]

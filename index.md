@@ -3,10 +3,6 @@ layout: default
 title: MakeUnity3D
 ---
 
-# Make Unity 3D
+# MakeUnity3D
 
-A simple jQuery plugin.
-
-## Iframe
-
-To embed in an iframe, use /embed.html?url="link to the .unity3d file"
+Check [GitHub repository]({{ site.github.repository_url }}) for info.
